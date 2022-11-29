@@ -28,7 +28,7 @@ const Button = (props) => {
   }
   return (
     <button className={`button ${color}`} onClick={handleClickButton}>
-      <img src={props.image} className= "Image"/>
+      <img src={props.image} className= "Image" alt = "Task"/>
     </button>
   );
 };
