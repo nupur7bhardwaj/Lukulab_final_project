@@ -9,7 +9,7 @@ function App() {
     <>
     <div className = "container">
     <div className="Bro">
-      <h2>EXERCISE-2</h2>
+      <h2>EXERCISE-4</h2>
       <br/>
       <br/>
       <Images/>
@@ -17,9 +17,8 @@ function App() {
       <br/>
       </div>
       <footer>
-       <button type="button" className="btn btn-link">How to do the exercise?</button>
-        <br/>
-      </footer>
+       <a href="url">How to do the exercise?</a>
+       </footer>
     </div>
     </>
   );

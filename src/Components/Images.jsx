@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import Done from './Done.jsx';
 import Audio from './Audio.jsx';
-import NextButton from "./Next.jsx";
+import NextButton from './Next.jsx';
 import GroupButton from './GroupButton.jsx'
 const Button = (props) => {
     const [active, setActive] = useState(false);
@@ -47,62 +47,62 @@ export default function Image() {
       };
       const slides = [
         {
-          image: ["/pictures/1.jpg"],
+          image: ["/pictures/1/1.jpg"],
           correctImages: ["Pink", "correct1"],
-          audio: ["1.mp3"],
+          audio: ["/Audio/1.mp3"],
         },
         {
-          image: ["/pictures/2.jpg"],
+          image: ["/pictures/2/1.jpg"],
           correctImages: ["mist","correct2"],
           audio: ["/Audio/2.mp3"],
         },
         {
-          image: ["/pictures/3.jpg"],
+          image: ["/pictures/3/1.jpg"],
           correctImages: ["pet","correct2"],
           audio: ["/Audio/3.mp3"]
         },
         {
-          image: ["/pictures/4.jpg"],
+          image: ["/pictures/4/1.jpg"],
           correctImages: ["man","correct1"],
           audio: ["4.mp3"]
         },
         {
-            image: ["/pictures/5.jpg"],
+            image: ["/pictures/5/1.jpg"],
             correctImages: ["mad","correct2"],
             audio: ["/Audio/5.mp3"]
           },
           {
-            image: ["/pictures/6.jpg"],
+            image: ["/pictures/6/1.jpg"],
             correctImages: ["sun","correct2"],
             audio: ["/Audio/6.mp3"]
           },
           {
-            image: ["/pictures/7.jpg"],
+            image: ["/pictures/7/1.jpg"],
             correctImages: ["help","correct2"],
             audio: ["/Audio/7.mp3"]
           },
           {
-            image: ["/pictures/8.jpg"],
+            image: ["/pictures/8/1.jpg"],
             correctImages: ["hand","correct1"],
             audio: ["/Audio/8.mp3"]
           },
           {
-            image: ["/pictures/9.jpg"],
+            image: ["/pictures/9/1.jpg"],
             correctImages: ["dad","correct1"],
             audio: ["/Audio/9.mp3"]
           },
           {
-            image: ["/pictures/10.jpg"],
+            image: ["/pictures/10/1.jpg"],
             correctImages: ["bit","correct2"],
             audio: ["/Audio/10.mp3"]
           },
           {
-            image: ["/pictures/11.jpg"],
+            image: ["/pictures/11/1.jpg"],
             correctImages: ["grin","correct2"],
             audio: ["/Audio/11.mp3"]
           },
           {
-            image: ["/pictures/12.jpg"],
+            image: ["/pictures/12/1.jpg"],
             correctImages: ["bed","correct1"],
             audio: ["/Audio/12.mp3"]
           },
@@ -130,12 +130,12 @@ export default function Image() {
           <br />
           <GroupButton/>
       <div>
-        <Audio />
+        <Audio src={slides[slideNumber].audio}/>
         <br />
       </div>
 
       <div>
-        <Done disabled={disabled} onClick={handleDoneClick} />
+      <Done setDonePressed={disabled} onClick={handleDoneClick} />
       </div>
       <br />
       <br />

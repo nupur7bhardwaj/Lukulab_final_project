@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Audio() {
+export default function Audio(props) {
   const [isOpen, setIsOpen] = useState(true);
   function handleClick(event) {
     setIsOpen(!isOpen);
@@ -8,8 +8,9 @@ export default function Audio() {
   return (
     <div className="Play">
       <button className="Btn" onClick={handleClick}>
-        <audio controls>
-          <source src="/Audio/1.mp3" type="audio/mp3"/>
+        <audio controls key={props.src}>
+          
+          <source src={props.src} type="audio/mp3"/>
         </audio>
       </button>
     </div>
