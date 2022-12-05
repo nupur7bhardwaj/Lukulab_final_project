@@ -3,7 +3,13 @@ import { useState } from 'react';
 import Done from './Done.jsx';
 import Audio from './Audio.jsx';
 import NextButton from './Next.jsx';
-import GroupButton from './GroupButton.jsx'
+import GroupButton from './GroupButton.jsx';
+import '../App.css';
+
+
+
+
+
 const Button = (props) => {
     const [active, setActive] = useState(false);
     const handleClickButton = (Word) => {
@@ -128,12 +134,14 @@ export default function Image() {
             })}
           </div>
           <br />
-          <GroupButton/>
+          
       <div>
+        <br/> 
+        <GroupButton/>
         <Audio src={slides[slideNumber].audio}/>
         <br />
       </div>
-
+      
       <div>
       <Done setDonePressed={disabled} onClick={handleDoneClick} />
       </div>
@@ -144,5 +152,5 @@ export default function Image() {
       </div>
     </>
   );
-}
+   }
 
