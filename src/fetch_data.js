@@ -19,7 +19,7 @@ const Lukulab_Exercise_QUERY = `
         }
     }
 `;
-export const fetchLukulab_exercise = async () => {
+export const fetchLukulab_Exercise = async () => {
     const response = await fetch(ENDPOINT_URL, {
         method: "POST",
         body: JSON.stringify({
@@ -28,5 +28,5 @@ export const fetchLukulab_exercise = async () => {
     });
     return await response.json();
 };
-Footer
+
 

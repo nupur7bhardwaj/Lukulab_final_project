@@ -32,22 +32,25 @@
   align-items: normal;
 }
 
-.check.circle {
-  stroke: rgb(48, 224, 28);
-  fill: rgb(22, 222, 106);
-  stroke-width: 0;
-  height: 5em;
-  width: 3em;
+.check-circle {
+  color: rgb(48, 224, 28);
+  display:inline-block;
+  border-radius: 50px;
+  border:2px solid grey;
+  width: 25px;
+  cursor: pointer;
+  margin:5px;
 }
 
-.x.circle {
-  stroke: red;
-  fill: red;
-  stroke-width: 0;
-  height: 5em;
-  width: 3em;
+.x-circle {
+  color: red;
+  display:inline-block;
+  border-radius: 50px;
+  border:2px solid grey;
+  width: 25px;
+  cursor: pointer;
+  margin:5px;
 }
-
 .Done {
   display: flex;
   justify-content: center;

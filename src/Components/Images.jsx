@@ -1,19 +1,19 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState} from 'react';
 import Done from './Done.jsx';
 import Audio from './Audio.jsx';
 import NextButton from './Next.jsx';
 import GroupButton from './GroupButton.jsx';
 import '../App.css';
-//import {BsCheckCircle}from "react-icons/bs";
-//import {BsXCircle}  from "react-icons/bs";
+import {BsCheckCircle}from "react-icons/bs";
+import {BsXCircle}  from "react-icons/bs";
+//import { fetchLukulab_Exercise } from "../fetch_data";
 
 
 
-
-export const Button = (props) => {
+const Button = (props) => {
   const [active, setActive] = useState(false);
-  const handleClickButton = (Word) => {
+  const handleClickButton = (image) => {
     if (!active && !props.showResults) {
       setActive(true);
 
@@ -44,14 +44,79 @@ export default function Image() {
   const [donePressed, setDonePressed] = useState(false);
   const [disabled, setDisabled] = useState(true);
   const [slideNumber, setSlideNumber] = useState(0);
+  //const [pullDatas, setPullDatas] = useState();
   const handleDoneClick = () => {
     setDonePressed(true);
   };
+  /*const fetchData = async function () {
+    const data = await fetchLukulab_Exercise();
+    setPullDatas(data);
+  };
+  useEffect(() => {
+    fetchData();
+  }, []);*/
   const handleNextButton = () => {
     setSlideNumber(slideNumber + 1);
     setDonePressed(false);
     setDisabled(true);
   };
+  /*const exerciseSet =
+    pullDatas &&
+    pullDatas.data.Lukulab_Exercise.filter((exercise) => {
+      if (exercise.Exercise_Set === "4") {
+        return true;
+      } else {
+        return false;
+      }
+    });
+  console.log(exerciseSet);
+  console.log(pullDatas);
+  const exercise = pullDatas && exerciseSet[slideNumber];
+  return (
+    <>
+      <div className="container">
+        {pullDatas &&
+          exercise.Picture(" ").map((image) => {
+            const handleClick = () => {
+              selectedImage > 0 && setDisabled(false);
+              setSelectedImage([...selectedImage, image]);
+            };
+            return (
+              <Button
+                key={image}
+                correctPicture={exercise.Correctanswer("")}
+                image={image}
+                showResults={donePressed}
+                onClick={handleClick}
+              />
+
+            );
+          })}
+          
+      </div>
+      <br />
+
+  <div>
+    {pullDatas && <Audio fileName={exercise.Audio} />}
+    <br />
+  </div>
+  <div>
+    <GroupButton/>
+  </div>
+      <div>
+        <Done disabled={disabled} onClick={handleDoneClick} />
+      </div>
+      <br />
+      <br />
+      <div>
+        {donePressed ? <NextButton onClick={handleNextButton} /> : null}
+      </div>
+    </>
+  );
+}*/
+
+
+
   const slides = [
     {
       image: ["/pictures/1/1.jpg"],
@@ -116,7 +181,7 @@ export default function Image() {
 
   ];
   return (
-    <>
+<>
       <div className="container">
         {slides[slideNumber].image.map((image) => {
           const handleClick = () => {
@@ -131,34 +196,22 @@ export default function Image() {
               showResults={donePressed}
               onClick={handleClick}
             />
-          );
+
+          )
         })}
       </div>
       <br />
       <GroupButton />
-      <div>
-        {/* <div className= "check.circle">
-        {donePressed ? <BsCheckCircle setAudioPressed={disabled} onClick={handleDoneClick} /> : null}
-        
-        </div>
-        <div className="x.circle">
-       {donePressed ? <BsXCircle setAudioPressed={disabled} onClick={handleDoneClick} /> : null} 
-        
-        </div> */}
-        <br />
-        <Audio src={slides[slideNumber].audio} />
-        <br />
-      </div>
-
+      <br />
+      <Audio src={slides[slideNumber].audio} />
+      <br />
       <div>
         <Done setDonePressed={disabled} onClick={handleDoneClick} />
       </div>
       <br />
       <br />
-      <div>
+      <div className='boolean'>
         {donePressed ? <NextButton onClick={handleNextButton} /> : null}
       </div>
-    </>
-  );
+    </>)
 }
-

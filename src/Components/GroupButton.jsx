@@ -1,21 +1,26 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import "../App.css";
 import { BsCheckCircle } from "react-icons/bs";
 import { BsXCircle } from "react-icons/bs";
+import { NotificationContext } from './notification.context';
 
 export default function handleSelectionClick(props) {
   console.log("Button was clicked!");
+  const{setDoneDisabled}= useContext(NotificationContext)
   //props.onClick();
-
+ const selectHandler = (event)=>{
+  setDoneDisabled(false)
+ 
+ }
   return (
     <div>
-      <button className="check.circle" onClick={handleSelectionClick}>
-        <BsCheckCircle />
+      <div className="check-circle" onClick={selectHandler} name = "check">
+      &#10003;
 
-      </button>
-      <button className="x.circle" onClick={handleSelectionClick}>
-        <BsXCircle />
-      </button>
+      </div>&nbsp;
+      <div className="x-circle" onClick={selectHandler} name = "uncheck">
+      &#88;
+      </div>
     </div>
   )
 }
