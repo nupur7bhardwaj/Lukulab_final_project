@@ -4,59 +4,74 @@
   height: 50%;
   margin: 20px;
 }
-.App-footer{
+
+.App-footer {
   background-color: #96a6ac;
   min-height: 100vh;
   color: #66b9e2;
 }
+
 .container {
   display: flex;
   flex-direction: row;
   flex-flow: row;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  align-content: center ;
+  text-align: center;
 }
-.button{
+
+.h2 {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.button {
   width: 20cm;
   height: 10cm;
   align-items: normal;
-  }
-  .GroupButton button-2{
-  width: 10px;
-  height: 10px;
-  color: green;
-  align-items: flex-end;
-  }
-  .GroupButton button-3{
-  width: 10px;
-  height: 10px;
-  color: red;
-  align-items: flex-end;
-  }
-.Done{
+}
+
+.check.circle {
+  stroke: rgb(48, 224, 28);
+  fill: rgb(22, 222, 106);
+  stroke-width: 0;
+  height: 5em;
+  width: 3em;
+}
+
+.x.circle {
+  stroke: red;
+  fill: red;
+  stroke-width: 0;
+  height: 5em;
+  width: 3em;
+}
+
+.Done {
   display: flex;
   justify-content: center;
   flex-direction: row;
   width: 100px;
-  height:50px;
-  align-items:center;
-}
-.Next{
-  color: rgb(6, 6, 5);
-  width: 100px;
-  height:50px
+  height: 50px;
+  align-items: center;
 }
 
-.Bro{
+.Next {
+  color: rgb(6, 6, 5);
+  width: 100px;
+  height: 50px
+}
+
+.Bro {
   border-style: solid;
   background-color: #f6f8f6;
   border-width: .5px;
-  
+
 }
-.Image{
+
+.Image {
   width: 500px;
-  height:300px;
-  align-items:normal; 
+  height: 300px;
+  align-items: normal;
 }
