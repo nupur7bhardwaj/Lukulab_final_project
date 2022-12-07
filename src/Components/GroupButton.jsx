@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import "../App.css";
-
 import { NotificationContext } from './notification.context';
 
 export default function handleSelectionClick(props) {

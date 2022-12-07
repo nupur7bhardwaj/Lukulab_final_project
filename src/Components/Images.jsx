@@ -5,7 +5,6 @@ import Audio from './Audio.jsx';
 import NextButton from './Next.jsx';
 import GroupButton from './GroupButton.jsx';
 import '../App.css';
-
 import { fetchLukulab_Exercise } from "../fetch_data";
 
 
