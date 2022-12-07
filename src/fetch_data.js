@@ -1,21 +1,22 @@
 const ENDPOINT_URL = "https://fun-moose-91.hasura.app/v1/graphql";
 const Lukulab_Exercise_QUERY = `
     query {
-         Lukulab_exercise {
-            id
-            name
-            type
-            skill_tag
-            Complexity_level
-            picture
-            text
-            active elements
-            instructions
-            correct answer
-            average result
-            audio
-            exercise_set
-            exercise_no
+         Lukulab_Exercise {
+            Complexity_Level
+		Exercise_No
+		ID
+		Activeelements
+		Audio
+		AverageResult
+		Correctanswer
+		Exercise_Set
+		Instructions
+		Name
+		Picture
+		Skill_tag
+		Text
+		Timer
+		Type
         }
     }
 `;

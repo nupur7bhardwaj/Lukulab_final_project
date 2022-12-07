@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import "../App.css";
-import { BsCheckCircle } from "react-icons/bs";
-import { BsXCircle } from "react-icons/bs";
+
 import { NotificationContext } from './notification.context';
 
 export default function handleSelectionClick(props) {
