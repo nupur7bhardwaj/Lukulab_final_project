@@ -7,6 +7,7 @@ export default function NextButton(props) {
   const{setDoneDisabled}= useContext(NotificationContext)
  const handleClick = (event)=>{
   setDoneDisabled(true)
+  props.onClick(event)
  
  }
   return (

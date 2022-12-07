@@ -5,8 +5,7 @@ import Audio from './Audio.jsx';
 import NextButton from './Next.jsx';
 import GroupButton from './GroupButton.jsx';
 import '../App.css';
-import {BsCheckCircle}from "react-icons/bs";
-import {BsXCircle}  from "react-icons/bs";
+
 //import { fetchLukulab_Exercise } from "../fetch_data";
 
 
